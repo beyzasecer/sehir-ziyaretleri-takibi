@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Proje</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Anasayfa</span></a>
+      </li>
+    </ul>
+    {{#if username}}
+      <span class="text-light mr-4">Merhaba {{username}}</span>
+      <a href="/Account/Logout/" class="btn btn-outline-danger text-light my-2 my-sm-0">Çıkış Yap</a>
+    {{else}}
+      <a href="/Account/Register/"class="btn btn-outline-warning text-light mr-2 my-2 my-sm-0">Kayıt Ol</a>
+      <a href="/Account/Login/" class="btn btn-outline-success text-light mr-2 my-2 my-sm-0">Giriş Yap</a>
+    {{/if}}
+  </div>
+</nav>
